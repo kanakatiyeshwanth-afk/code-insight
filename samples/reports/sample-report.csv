@@ -1,0 +1,6 @@
+file,class,method,start_line,end_line,line_count,cyclomatic_complexity,max_nesting_depth,status,review_remarks
+"ComplexityDemo.java","ComplexityDemo","evaluate",5,18,14,6,5,"REVIEW","NEST > 4"
+"MathUtility.java","MathUtility","factorial",8,17,10,3,1,"OK","-"
+"MathUtility.java","MathUtility","isPrime",19,27,9,6,2,"OK","-"
+"OrderService.java","OrderService","eligibleForDiscount",19,21,3,2,0,"OK","-"
+"OrderService.java","OrderService","shippingCost",4,17,14,6,2,"OK","-"

@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.codeinsight</groupId>
+    <artifactId>code-insight</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Code Insight: Source Code Complexity Analyzer</name>
+    <description>A lightweight, zero-dependency Java static code analyzer for method-level complexity metrics using the standard JDK Compiler API.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Compiler Plugin with jdk.compiler module support -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>--add-modules</arg>
+                        <arg>jdk.compiler</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire Test Runner Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <argLine>--add-modules jdk.compiler -ea</argLine>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- Executable JAR Packaging -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.codeinsight.Main</mainClass>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- Exec Plugin to run directly from Maven -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <mainClass>com.codeinsight.Main</mainClass>
+                    <arguments>
+                        <argument>--add-modules</argument>
+                        <argument>jdk.compiler</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
