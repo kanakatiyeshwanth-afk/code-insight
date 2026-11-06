@@ -40,3 +40,4 @@ public class StatusBadgeRenderer extends DefaultTableCellRenderer {
         return c;
     }
 }
+

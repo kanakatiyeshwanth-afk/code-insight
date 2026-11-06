@@ -83,3 +83,4 @@ Before pushing your changes or opening a Pull Request:
    - All automated tests pass.
    - Variable and method names are self-explanatory.
 4. Once approved, perform a clean `Squash and Merge` or `Rebase and Merge` into `main`.
+

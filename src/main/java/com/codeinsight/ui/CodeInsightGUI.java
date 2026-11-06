@@ -515,3 +515,4 @@ public class CodeInsightGUI extends JFrame {
         JOptionPane.showMessageDialog(this, scrollPane, "Skipped Files Details", JOptionPane.WARNING_MESSAGE);
     }
 }
+

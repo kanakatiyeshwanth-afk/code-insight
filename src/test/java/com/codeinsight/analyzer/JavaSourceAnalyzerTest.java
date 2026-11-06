@@ -149,3 +149,4 @@ public class JavaSourceAnalyzerTest {
         assert m.cyclomaticComplexity() == 1 : "Enclosing method should not inherit lambda complexity";
     }
 }
+

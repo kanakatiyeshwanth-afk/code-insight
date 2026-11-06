@@ -22,3 +22,4 @@ public record AnalysisResult(
         return metrics.stream().filter(config::isReviewRequired).count();
     }
 }
+

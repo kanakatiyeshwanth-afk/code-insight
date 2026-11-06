@@ -103,3 +103,4 @@ public final class ProjectScanner {
         return results;
     }
 }
+

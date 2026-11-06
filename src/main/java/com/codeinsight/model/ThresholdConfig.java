@@ -38,3 +38,4 @@ public record ThresholdConfig(int maxComplexity, int maxNesting, int maxLines) {
         return reasons.isEmpty() ? "-" : String.join(", ", reasons);
     }
 }
+

@@ -37,3 +37,4 @@ jobs:
       with:
         name: code-insight-jdk${{ matrix.java-version }}
         path: target/*.jar
+

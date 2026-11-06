@@ -124,3 +124,4 @@ public final class ReportFormatter {
         return value.length() <= max ? value : value.substring(0, Math.max(0, max - 3)) + "...";
     }
 }
+

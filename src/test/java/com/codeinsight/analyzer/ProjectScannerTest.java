@@ -53,3 +53,4 @@ public class ProjectScannerTest {
         assert caught : "Scanning non-existent path must throw IOException";
     }
 }
+

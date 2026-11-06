@@ -10,3 +10,4 @@ public record SkippedFileInfo(Path filePath, String reason) {
         return filePath.getFileName().toString();
     }
 }
+

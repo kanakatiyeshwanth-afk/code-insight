@@ -22,3 +22,4 @@ if errorlevel 1 exit /b 1
 
 echo Running automated test suite...
 java --add-modules jdk.compiler -ea -cp build\test com.codeinsight.TestRunner %*
+
